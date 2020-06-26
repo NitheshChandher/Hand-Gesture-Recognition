@@ -1,0 +1,39 @@
+21:42:00 [Skill] INFO  Skill:139 - Connecting to Furhat server on 192.168.1.178:1932
+21:42:03 [Skill] ERROR EventSystem:186 - Timed out while waiting for class furhatos.event.responses.ResponseWebServerPort
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1784)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1928)
+	at furhatos.event.EventSystem.sendAndWait(EventSystem.java:183)
+	at furhatos.event.EventSystem.sendAndWait(EventSystem.java:173)
+	at furhatos.skills.Skill.requestFurhatWebPort(Skill.java:249)
+	at furhatos.skills.Skill.startSkill(Skill.java:226)
+	at furhatos.skills.Skill.main(Skill.java:94)
+	at furhatos.app.subsystem3.MainKt.main(main.kt:14)
+21:42:03 [Skill] ERROR Skill:231 - java.util.concurrent.TimeoutException
+21:42:03 [Skill] WARN  Skill:232 - Unable to get real furhatWebPort, using default of 80
+21:42:03 [Subsystem3Skill] INFO  Subsystem3Skill:173 - Starting skill
+21:42:04 [Subsystem3Skill] ERROR InitRunner: 28 - java.lang.NullPointerException
+21:42:04 [ErrorLoggingThread] ERROR Subsystem3Skill:466 - java.lang.NullPointerException
+	at furhatos.skills.FurhatSpeech.getVoices(FurhatSpeech.java:279)
+	at furhatos.skills.FurhatEventWrapper.getVoices(FurhatEventWrapper.java:31)
+	at furhatos.skills.FurhatSpeech.getVoice(FurhatSpeech.java:288)
+	at furhatos.skills.FurhatEventWrapper.getVoice(FurhatEventWrapper.java:31)
+	at furhatos.skills.FurhatSpeech.setVoiceAndInputLanguage(FurhatSpeech.java:268)
+	at furhatos.skills.FurhatEventWrapper.setVoiceAndInputLanguage(FurhatEventWrapper.java:31)
+	at furhatos.flow.kotlin.Furhat.setVoice(Furhat.kt:678)
+	at furhatos.flow.kotlin.Furhat.internalSetVoice(Furhat.kt:698)
+	at furhatos.flow.kotlin.Furhat.setVoice(Furhat.kt:713)
+	at furhatos.flow.kotlin.Furhat.setVoice$default(Furhat.kt:711)
+	at furhatos.app.subsystem3.flow.GeneralKt$Idle$1$1.invoke(general.kt:9)
+	at furhatos.app.subsystem3.flow.GeneralKt$Idle$1$1.invoke(general.kt)
+	at furhatos.flow.kotlin.InitRunner.run(InitRunner.kt:25)
+	at furhatos.flow.kotlin.StateRunner.runInitTrigger(StateRunner.kt:215)
+	at furhatos.flow.kotlin.StateRunner.run(StateRunner.kt:64)
+	at furhatos.flow.kotlin.Flow.tailRecRun(Flow.kt:146)
+	at furhatos.flow.kotlin.Flow.run(Flow.kt:110)
+	at furhatos.app.subsystem3.Subsystem3Skill.start(main.kt:9)
+	at furhatos.skills.Skill.initializeSkill(Skill.java:176)
+	at furhatos.skills.Skill.lambda$startSkill$2(Skill.java:234)
+	at java.lang.Thread.run(Thread.java:748)
+
+21:42:35 [Broker Client] ERROR BrokerClient:152 - Unexpected disconnect from broker
